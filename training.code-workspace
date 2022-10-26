@@ -6,6 +6,42 @@
 		}
 	],
 	"settings": {
-		"files.autoSave": "off"
+		"files.autoSave": "off",
+		"editor.detectIndentation": false,
+		"editor.insertSpaces": true,
+		"editor.tabSize": 2,
+		"files.insertFinalNewline": true,
+		"files.associations": {
+		  "*.html": "twig",
+		  "*.module": "php",
+		  "*.theme": "php",
+		  "*.inc": "php"
+		},
+	},
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "DDEV Xdebug",
+            "type": "php",
+            "request": "launch",
+            "hostname": "0.0.0.0",
+            "port": 9003,
+            "pathMappings": {
+                "/var/www/html": "${workspaceFolder}"
+            }
+        }
+    ]
+},
+	"extensions": {
+		"recommendations": [
+			"mhutchie.git-graph",
+			"redhat.vscode-yaml",
+			"mblode.twig-language-2"
+		],
+		"unwantedRecommendations": [
+			"eamodio.gitlens",
+			"DavidAnson.vscode-markdownlint"
+		]
 	}
 }
